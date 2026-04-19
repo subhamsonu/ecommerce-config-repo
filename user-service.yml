@@ -1,0 +1,17 @@
+server:
+  port: 8125
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${USER_DB_URL:jdbc:mysql://localhost:3306/e_commerce_db}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:change_me}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    com.smartmart.userservice: DEBUG

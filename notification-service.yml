@@ -1,0 +1,36 @@
+# notification-service.yml
+
+server:
+  port: 8124
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${NOTIFICATION_DB_URL:jdbc:mysql://localhost:3306/e_commerce_db}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:change_me}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+  web:
+    error:
+      include-message: always
+      include-binding-errors: always
+
+logging:
+  level:
+    com.smartmart.notification: DEBUG
+
+  file:
+    name: logs/notification-service.log
+
+payment-service:
+  url: http://payment-service
+
+  endpoints:
+    process-payment: /api/payments/process
+    get-payment: /api/payments/{id}
+    update-status: /api/payments/{id}/status
