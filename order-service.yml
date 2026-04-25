@@ -38,3 +38,7 @@ payment-service:
 
 notification-service:
   url: http://notification-service
+
+eureka:
+  instance:
+    prefer-ip-address: true

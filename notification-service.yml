@@ -3,6 +3,10 @@
 server:
   port: 8124
 
+eureka:
+  instance:
+    prefer-ip-address: true  
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

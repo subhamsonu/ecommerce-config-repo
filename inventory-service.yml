@@ -30,3 +30,7 @@ spring:
 logging:
   level:
     com.smartmart.inventoryservice: DEBUG
+
+eureka:
+  instance:
+    prefer-ip-address: true

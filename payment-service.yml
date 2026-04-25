@@ -46,3 +46,7 @@ logging:
 
   file:
     name: logs/payment-service.log
+ 
+eureka:
+  instance:
+    prefer-ip-address: true
